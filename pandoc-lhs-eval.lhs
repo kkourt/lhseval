@@ -1,13 +1,4 @@
-I have been writing lots of Haskell code. In fact, I've been writing so much
-Haskell code that in a shell script I wrote:
-
-    awk '{ print $2 }' $ ghc-mod doc $m
-
-instead of:
-
-    ghc-mod doc $m | awk '{ print $2 }'
-
-In any case, Haskell has [great
+I have been writing lots of Haskell code. Haskell has [good
 support](https://wiki.haskell.org/Literate_programming) for [literate
 programming](http://en.wikipedia.org/wiki/Literate_programming) which I think is
 great, so I decided to try it.
@@ -71,14 +62,15 @@ To produce:
 myfn 3
 ~~~~
 
+Indded, this file is a literate haskell source file that uses iteslf to
+produce the above example. You can find the source in:
+[https://github.com/kkourt/lhseval](https://github.com/kkourt/lhseval).
+
 Without knowing anything about either Pandoc or LHI, the following two examples
 can help to do a quick-and-dirty implementation:
 
 - [http://johnmacfarlane.net/pandoc/scripting.html#include-files](http://johnmacfarlane.net/pandoc/scripting.html#include-files)
 - [http://hub.darcs.net/jcpetruzza/hint/browse/examples/example.hs](http://hub.darcs.net/jcpetruzza/hint/browse/examples/example.hs)
-
-You can find the source code in:
-[https://github.com/kkourt/lhseval](https://github.com/kkourt/lhseval)
 
 \begin{code}
 
