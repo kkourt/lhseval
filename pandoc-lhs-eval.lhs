@@ -1,14 +1,14 @@
 I have been writing lots of Haskell code. In fact, I've been writing so much
 Haskell code that in a shell script I wrote:
 
-        awk '{ print $2 }' $ ghc-mod doc $m
+    awk '{ print $2 }' $ ghc-mod doc $m
 
-    instead of:
+instead of:
 
-        ghc-mod doc $m | awk '{ print $2 }'
+    ghc-mod doc $m | awk '{ print $2 }'
 
 In any case, Haskell has [great
-support](https://wiki.haskell.org/Literate_programming) for [literal
+support](https://wiki.haskell.org/Literate_programming) for [literate
 programming](http://en.wikipedia.org/wiki/Literate_programming) which I think is
 great, so I decided to try it.
 
@@ -77,8 +77,11 @@ can help to do a quick-and-dirty implementation:
 - [http://johnmacfarlane.net/pandoc/scripting.html#include-files](http://johnmacfarlane.net/pandoc/scripting.html#include-files)
 - [http://hub.darcs.net/jcpetruzza/hint/browse/examples/example.hs](http://hub.darcs.net/jcpetruzza/hint/browse/examples/example.hs)
 
+You can find the source code in:
+[https://github.com/kkourt/lhseval](https://github.com/kkourt/lhseval)
 
 \begin{code}
+
 say :: String -> LHI.Interpreter ()
 say = LHI.liftIO . putStrLn
 
